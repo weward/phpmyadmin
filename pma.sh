@@ -24,9 +24,9 @@ if [ ! -f $CMD ]; then
     CMD=${VAGRANT_SCRIPTS}serve.sh
 else
     # Create an SSL certificate
-    sudo bash $CMD_CERT phpmyadmin.test
+    sudo bash $CMD_CERT skynet-pma.local
 fi
 
-sudo bash $CMD phpmyadmin.test $(pwd)/phpmyadmin 80 443 7.3
+sudo bash $CMD skynet-pma.local $(pwd)/phpmyadmin 80 443 7.3
 
 sudo service nginx reload
